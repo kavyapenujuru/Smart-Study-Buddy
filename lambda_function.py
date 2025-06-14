@@ -68,7 +68,7 @@ Assistant:"""
                 {"role": "user", "content": prompt}
             ],
             temperature=0.7,
-            max_tokens=200
+            max_tokens=2000
         )
 
         answer = response['choices'][0]['message']['content'].strip()
