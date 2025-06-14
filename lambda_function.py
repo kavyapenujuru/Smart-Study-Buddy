@@ -5,7 +5,7 @@ import boto3
 from datetime import datetime
 
 # Set your OpenAI API key as an environment variable in Lambda
-openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = get_openai_api_key()  # Reads from Secrets Manager
 SMARTSTUDY_MODEL = "ft:gpt-3.5-turbo-1106:your-org::smartstudy-budddy"  # Replace with your fine-tuned model name
 
 # DynamoDB setup for context/memory storage per user
